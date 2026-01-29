@@ -1,0 +1,78 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: portfolio_mysql_dev
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: portfolio
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: portfolio
+      MYSQL_PASSWORD: secret
+      TZ: Europe/Sarajevo
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    networks:
+      - portfolio_dev_network
+
+  php:
+    build:
+      context: ./Docker/php8.3
+      dockerfile: Dockerfile
+    container_name: portfolio_php_dev
+    volumes:
+      - ./portfolio-laravel:/var/www/laravel
+      - ./Docker/php8.3/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
+    depends_on:
+      - mysql
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_HOST=mysql
+      - DB_DATABASE=portfolio
+      - DB_USERNAME=portfolio
+      - DB_PASSWORD=secret
+    networks:
+      - portfolio_dev_network
+
+  nextjs:
+    image: node:18-alpine
+    container_name: portfolio_nextjs_dev
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./portfolio-next:/app
+      - /app/node_modules
+      - /app/.next
+    command: sh -c "echo 'Installing dependencies...' && npm install && echo 'Starting Next.js dev server...' && npm run dev"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://portfolio:8443/api
+    networks:
+      - portfolio_dev_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: portfolio_nginx_dev
+    ports:
+      - "8443:80"
+    volumes:
+      - ./portfolio-laravel:/var/www/laravel
+      - ./Docker/nginx/default.dev.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+      - nextjs
+    networks:
+      - portfolio_dev_network
+
+networks:
+  portfolio_dev_network:
+    driver: bridge
+
+volumes:
+  mysql_dev_data:
