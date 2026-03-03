@@ -37,8 +37,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 2. **Clone the Repository**
 ```bash
-git clone https://github.com/Mirza9888/portfolio-monorepo.git
-cd portfolio-monorepo
+git clone https://github.com/MIRZAREDZIC/Portfolio.git
+cd Portfolio
 ```
 
 3. **Setup SSL Certificates**

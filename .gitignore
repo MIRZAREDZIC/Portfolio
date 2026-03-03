@@ -5,6 +5,7 @@ init-letsencrypt.sh
 .env
 .env.*
 !.env.example
+!.env.local.example
 
 composer-setup.php
 composer.phar
