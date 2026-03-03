@@ -41,13 +41,17 @@ This is a monorepo containing a complete portfolio website with an admin panel f
 
 ## 📸 Screenshots
 
-| Home | Projects |
+| 🏠 Home / Login | 👤 About Me |
 |---|---|
-| ![Home](screenshots/a.png) | ![Projects](screenshots/b.png) |
+| ![Home](screenshots/a.png) | ![About Me](1.png) |
 
-| Experience | Contact |
+| 📁 Projects | 💼 Experience |
 |---|---|
-| ![Experience](screenshots/c.png) | ![Contact](screenshots/d.png) |
+| ![Projects](screenshots/c.png) | ![Experience](screenshots/b.png) |
+
+| 📬 Contact | 🌙 Dark Mode |
+|---|---|
+| ![Contact](screenshots/d.png) | ![Dark Mode](screenshots/2.png) |
 
 ## 📁 Project Structure
 
@@ -255,7 +259,7 @@ This project is open source and available under the [MIT License](./LICENSE).
 **Mirza Redžić** — Full Stack Developer
 - GitHub: [@MIRZAREDZIC](https://github.com/MIRZAREDZIC)
 - Email: mirza.redzic.dev@gmail.com
-- LinkedIn: [View Profile](https://www.linkedin.com/in/mirza-redzic/)
+- LinkedIn: [View Profile](https://www.linkedin.com/in/mirza-redzic)
 
 ---
 
