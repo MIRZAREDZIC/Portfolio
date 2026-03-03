@@ -43,7 +43,7 @@ This is a monorepo containing a complete portfolio website with an admin panel f
 
 | 🏠 Home / Login | 👤 About Me |
 |---|---|
-| ![Home](screenshots/a.png) | ![About Me](1.png) |
+| ![Home](screenshots/a.png) | ![About Me](screenshots/1.png) |
 
 | 📁 Projects | 💼 Experience |
 |---|---|
