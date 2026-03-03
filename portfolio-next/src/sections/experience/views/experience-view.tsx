@@ -226,7 +226,7 @@ export default function ExperienceView() {
                         </Avatar>
                         <Typography variant="body2" sx={{ fontWeight: 'bold', fontSize: '0.95rem' }}>
                           {testimonial.author}<br/>
-                          <Typography component="span" variant="caption" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
+                          <Typography component="span" variant="caption" color="text.secondary" sx={{ fontSize: '0.8rem',mr:"20px" }}>
                             {testimonial.position}
                           </Typography>
                         </Typography>

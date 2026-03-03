@@ -93,7 +93,7 @@ export default function ContactView() {
                     fontSize: '1.3rem'
                   }}
                 >
-                  Mirza Redžić
+                  Mirza Redzic
                 </Typography>
               </Box>
 
@@ -138,10 +138,10 @@ export default function ContactView() {
                       sx={{ 
                         fontWeight: 500,
                         wordBreak: 'break-word',
-                        fontSize: '1.1rem' 
+                        fontSize: '0.95rem' 
                       }}
                     >
-                      mirza.redzic@live.com
+                      mirza.redzic.dev@gmail.com
                     </Typography>
                   </Box>
                 </Grid>
