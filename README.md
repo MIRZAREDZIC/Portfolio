@@ -43,11 +43,11 @@ This is a monorepo containing a complete portfolio website with an admin panel f
 
 | Home | Projects |
 |---|---|
-| ![Home](screenshots/screenshot-home.png) | ![Projects](screenshots/screenshot-projects.png) |
+| ![Home](screenshots/a.png) | ![Projects](screenshots/b.png) |
 
 | Experience | Contact |
 |---|---|
-| ![Experience](screenshots/screenshot-experience.png) | ![Contact](screenshots/screenshot-contact.png) |
+| ![Experience](screenshots/c.png) | ![Contact](screenshots/d.png) |
 
 ## 📁 Project Structure
 
@@ -124,8 +124,8 @@ portfolio-monorepo/
    ```
 
 6. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8443/api
+   - Frontend: http://portfolio:3000
+   - Backend API: http://portfolio:8443/api
 
 ### Development Setup (Without Docker)
 
@@ -159,7 +159,7 @@ php artisan serve
 cd portfolio-next
 npm install
 cp .env.local.example .env.local
-# Set NEXT_PUBLIC_API_URL=http://localhost:8000/api in .env.local
+# Set NEXT_PUBLIC_API_URL=http://portfolio:8000/api in .env.local
 npm run dev
 ```
 
@@ -198,7 +198,7 @@ APP_NAME=Portfolio
 APP_ENV=local
 APP_KEY=base64:...
 APP_DEBUG=true
-APP_URL=http://localhost
+APP_URL=http://portfolio
 
 DB_CONNECTION=mysql
 DB_HOST=mysql
@@ -210,7 +210,7 @@ DB_PASSWORD=secret
 
 #### Next.js (`portfolio-next/.env.local`)
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:8443/api
+NEXT_PUBLIC_API_URL=http://portfolio:8443/api
 ```
 
 ## 🐳 Docker Services
@@ -255,7 +255,7 @@ This project is open source and available under the [MIT License](./LICENSE).
 **Mirza Redžić** — Full Stack Developer
 - GitHub: [@MIRZAREDZIC](https://github.com/MIRZAREDZIC)
 - Email: mirza.redzic.dev@gmail.com
-- LinkedIn: [View Profile](https://www.linkedin.com/in/mirza-redzic-4b727734a/)
+- LinkedIn: [View Profile](https://www.linkedin.com/in/mirza-redzic/)
 
 ---
 
